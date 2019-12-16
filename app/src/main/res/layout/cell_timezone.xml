@@ -1,0 +1,52 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cellContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_marginBottom="@dimen/tab_margin">
+
+        <TextView
+            android:id="@+id/cityName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/cell_text_margin"
+            android:layout_marginTop="@dimen/cell_text_margin"
+            android:layout_marginBottom="@dimen/cell_text_margin"
+            style="@style/TextAppearance.Bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Lisbon"/>
+
+        <TextView
+            android:id="@+id/gmtOffset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cell_text_margin"
+            android:layout_marginBottom="@dimen/cell_text_margin"
+            android:layout_marginEnd="@dimen/cell_text_margin"
+            android:textColor="@color/brown_grey_two"
+            app:layout_constraintEnd_toStartOf="@id/checkedIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="GMT +0"/>
+
+        <ImageView
+            android:id="@+id/checkedIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check_circle"
+            android:layout_marginEnd="@dimen/cell_text_margin"
+            android:layout_marginTop="@dimen/cell_text_margin"
+            android:layout_marginBottom="@dimen/cell_text_margin"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.evanmeyermann.cardemulationexample">
+
+    <!-- Permissions -->
+    <uses-feature
+        android:name="android.hardware.nfc.hce"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.NFC" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name=".CardEmulationExample"
+        android:theme="@style/AppTheme">
+        <activity android:name=".home.HomeActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- BEGIN_INCLUDE(CardEmulationManifest) -->
+        <!-- Service for handling communication with NFC terminal. -->
+        <service
+            android:name=".nfc.CardService"
+            android:exported="true"
+            android:permission="android.permission.BIND_NFC_SERVICE">
+
+            <!-- Intent filter indicating that we support card emulation. -->
+            <intent-filter>
+                <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!--
+                 Required XML configuration file, listing the AIDs that we are emulating cards
+                 for. This defines what protocols our card emulation service supports.
+            -->
+            <meta-data
+                android:name="android.nfc.cardemulation.host_apdu_service"
+                android:resource="@xml/aid_list" />
+        </service>
+        <!-- END_INCLUDE(CardEmulationManifest) -->
+        <activity
+            android:name=".CardDetails.UserDetailsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/enter_card_details">
+
+        </activity>
+
+        <activity
+            android:name=".Timezone.TimeZoneActivity"
+            android:label="@string/select_time_zone">
+        </activity>
+    </application>
+
+</manifest>

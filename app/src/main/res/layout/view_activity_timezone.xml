@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/AppTheme">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/searchViewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:background="@drawable/rounded_background"
+                app:queryBackground="@android:color/transparent"
+                app:iconifiedByDefault="false"
+                app:queryHint="@string/search_for_your_nearest_city">
+            </android.support.v7.widget.SearchView>
+
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:id="@+id/searchDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/brown_grey_two"
+            app:layout_constraintTop_toBottomOf="@id/searchViewContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </View>
+
+        <TextView
+            android:id="@+id/searchTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:text="@string/select_your_nearest_city"
+            android:textAppearance="@style/TextAppearance.Light"
+            app:layout_constraintTop_toBottomOf="@id/searchViewContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/timezoneList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            app:layout_constraintTop_toBottomOf="@id/searchTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

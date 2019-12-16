@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00e600</color>
+    <color name="colorPrimaryDark">#33cc33</color>
+    <color name="colorAccent">#66ff33</color>
+
+    <!-- Secondary colors -->
+    <color name="colorOrientationText">#464646</color>
+    <color name="colorSettingSubtitles">#80474747</color>
+    <color name="light_grey">#f3f3f3</color>
+    <color name="brown_grey">#a9a9a9</color>
+    <color name="brown_grey_two">#a2a2a2</color>
+    <color name="bright_orange">#ff5500</color>
+    <color name="very_light_pink">#c0c0c0</color>
+    <color name="greyish_brown">#474747</color>
+
+</resources>

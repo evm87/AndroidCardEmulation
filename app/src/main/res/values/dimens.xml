@@ -1,0 +1,27 @@
+<resources>
+    <!-- General -->
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="tab_margin">4dp</dimen>
+
+    <!-- Text -->
+    <dimen name="text_default_size">16dp</dimen>
+    <dimen name="text_large_size">24dp</dimen>
+
+    <!-- Button -->
+    <dimen name="button_inner_text_margin">60dp</dimen>
+    <dimen name="button_padding">16dp</dimen>
+
+    <!-- Background Corners-->
+    <dimen name="rounded_corner_radius">8dp</dimen>
+
+    <!-- Timezone cell value margins -->
+    <dimen name="cell_text_margin">20dp</dimen>
+
+    <!-- Wifi input spacing margins -->
+    <dimen name="card_spacing_large">32dp</dimen>
+    <dimen name="card_spacing_small">8dp</dimen>
+
+    <!-- Dialogue margins -->
+    <dimen name="dialogue_content_margin">24dp</dimen>
+
+</resources>

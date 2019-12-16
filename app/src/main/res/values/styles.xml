@@ -1,0 +1,56 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:buttonStyle">@style/Widget.Button</item>
+    </style>
+
+    <!-- Dialogue theme -->
+    <style name="ThemeOverlay.Dialogue" parent="@style/ThemeOverlay.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:buttonStyle">@style/Widget.Button</item>
+        <item name="android:textAppearance">@style/TextAppearance.Bold</item>
+    </style>
+
+    <!-- General theme -->
+    <style name="ThemeOverlay.Default" parent="">
+        <item name="android:background">@color/light_grey</item>
+        <item name="android:textSize">@dimen/text_default_size</item>
+    </style>
+
+    <!-- Bold text style -->
+    <style name="TextAppearance.Bold" parent="">
+        <item name="android:textColor">@color/colorOrientationText</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_default_size</item>
+    </style>
+
+    <!-- Light text style -->
+    <style name="TextAppearance.Light" parent="">
+        <item name="android:textColor">@color/brown_grey_two</item>
+        <item name="android:textSize">@dimen/text_default_size</item>
+    </style>
+
+    <!-- Standard button style -->
+    <style name="Widget.Button" parent="@style/Widget.AppCompat.Button">
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">@dimen/button_inner_text_margin</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/rounded_button_background</item>
+        <item name="android:color">@android:color/white</item>
+        <item name="android:textAppearance">@style/TextAppearance.Bold</item>
+    </style>
+
+    <!-- Clickable text style -->
+    <style name="TextAppearance.Clickable" parent="">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_default_size</item>
+    </style>
+
+</resources>

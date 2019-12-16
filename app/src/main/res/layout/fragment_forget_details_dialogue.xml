@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background">
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/forget_details"
+            android:textAppearance="@style/TextAppearance.Bold"
+            android:textSize="@dimen/text_large_size"
+            android:layout_margin="@dimen/dialogue_content_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/body_text"
+            />
+
+        <TextView
+            android:id="@+id/body_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/are_you_sure_you_want_to_forget_details"
+            android:textAppearance="@style/TextAppearance.Light"
+            android:layout_marginTop="@dimen/dialogue_content_margin"
+            android:layout_marginStart="@dimen/dialogue_content_margin"
+            android:layout_marginEnd="@dimen/dialogue_content_margin"
+            android:layout_marginBottom="48dp"
+            app:layout_constraintBottom_toTopOf="@id/cancelButton"
+            app:layout_constraintTop_toBottomOf="@id/header_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dialogue_content_margin"
+            android:layout_marginBottom="4dp"
+            android:padding="@dimen/button_padding"
+            android:text="@string/cancel"
+            android:textAppearance="@style/TextAppearance.Clickable"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/forgetNetworkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dialogue_content_margin"
+            android:layout_marginEnd="@dimen/dialogue_content_margin"
+            android:layout_marginBottom="4dp"
+            android:padding="@dimen/button_padding"
+            android:text="@string/forget_details"
+            android:textAppearance="@style/TextAppearance.Clickable"
+            android:textColor="@color/bright_orange"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cancelButton" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
